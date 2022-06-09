@@ -1,0 +1,38 @@
+@layout("/common/_container.html"){
+
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="${item.id}">
+
+            <div class="row">
+                <div class="col-sm-4 b-r">
+                    <#input id="id" name="自增主键" value="${item.id}" readonly="true" underline="true"/>
+                </div>
+                <div class="col-sm-4 b-r">
+                    <#input id="carName" name="汽车名字" value="${item.carName}" />
+                </div>
+                <div class="col-sm-4 b-r">
+                    <#input id="carType" name="类型" value="${item.carType}" />
+                </div>
+                <div class="col-sm-4 b-r">
+                    <#input id="carColor" name="颜色" value="${item.carColor}" />
+                </div>
+                <div class="col-sm-4 b-r">
+                    <#input id="manufacturer" name="厂商" value="${item.manufacturer}" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="CarInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="CarInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/car/car_info.js"></script>
+@}
